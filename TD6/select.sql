@@ -32,5 +32,6 @@ GROUP BY u.login
 HAVING COUNT(v.contrib) >= 2
 ORDER BY nb_contributions DESC;
 
+-- AS 的 alias只用在affichage上，也就是取的alias不能用在WHERE和Having这种判断语句中
 -- 为了筛选记录，我们在查询语句的末尾使用了 HAVING 关键字，而不是 WHERE 关键字。
 -- 这是因为 HAVING 子句用于筛选基于聚合函数计算的结果，而 WHERE 子句用于筛选行级别的结果
